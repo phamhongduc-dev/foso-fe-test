@@ -25,7 +25,7 @@ export default function Widgets() {
       </div>
     )
   } else if (topProducts.length === 0) {
-    content = <WidgetSummaryEmpty />
+    content = Array.from({ length: 5 }).map((_, index) => <WidgetSummaryEmpty key={`${index}`} />)
   } else {
     content = topProducts.map((item, index) => (
       <WidgetSummary key={`${item.name}-${index}`} name={item.name} quantity={item.quantity} growth={item.growth} />
