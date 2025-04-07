@@ -28,7 +28,7 @@ export default function ProductionPlanChart() {
   let content = null
 
   if (isLoading) {
-    content = <Skeleton className='h-[316px] w-[870px]' />
+    content = <Skeleton className='h-[294px] w-[870px]' />
   } else if (isError) {
     content = (
       <div className='flex items-center justify-center gap-4 self-stretch px-12 py-0'>
