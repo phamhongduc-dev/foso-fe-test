@@ -63,3 +63,11 @@ export const DUMMY_DATA = {
     { id: 5, material: 'Vải ni', code: 'NVL_00024', unit: 'Mét', quantity: 8 }
   ]
 }
+
+export const DUMMY_DATA_EMPTY = {
+  productionStatus: [
+    { status: 'Chưa hoàn thành', value: 0, fill: '#FF8F0D' },
+    { status: 'Đang sản xuất', value: 0, fill: '#0375F3' },
+    { status: 'Đã hoàn thành', value: 0, fill: '#1FC583' }
+  ]
+}
