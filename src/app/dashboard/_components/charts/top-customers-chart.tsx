@@ -123,7 +123,7 @@ export default function TopCustomersChart() {
           <Image src='/assets/caret-down.svg' alt='caret-down' width={12} height={12} className='aspect-[1/1]' />
         </Button>
       }
-      className='h-[424px]'
+      className='h-[424px] px-4'
     >
       {content}
     </ChartLayout>
