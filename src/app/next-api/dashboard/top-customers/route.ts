@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { DUMMY_DATA } from '@/data/dummy-data'
+import { getSharedData } from '@/data/dummy-data'
 
 export async function GET() {
   // Giả lập delay 1s
@@ -7,6 +7,6 @@ export async function GET() {
 
   return NextResponse.json({
     message: 'Get top customers successfully',
-    data: DUMMY_DATA.topCustomers
+    data: getSharedData().topCustomers
   })
 }
