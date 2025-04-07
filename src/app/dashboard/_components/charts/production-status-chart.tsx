@@ -10,7 +10,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { useGetProductionStatusQuery } from '@/queries/useDashboard'
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
 
-import { DUMMY_DATA_LOADING } from '@/data/dummy-data'
+import { DUMMY_DATA_EMPTY } from '@/data/dummy-data'
 
 const chartConfig = {
   value: {
@@ -68,7 +68,7 @@ export default function ProductionStatusChart() {
         </ChartContainer>
 
         <div className='flex items-start justify-center gap-2 self-stretch'>
-          {DUMMY_DATA_LOADING.productionStatus.map((item) => (
+          {DUMMY_DATA_EMPTY.productionStatus.map((item) => (
             <div
               key={item.status}
               className='flex shrink-0 grow basis-0 flex-col items-start gap-1 rounded-[8px] border border-solid border-[#DDDDE2] p-2'
