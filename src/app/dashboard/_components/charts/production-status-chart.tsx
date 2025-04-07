@@ -42,7 +42,7 @@ export default function ProductionStatusChart() {
         <p className='text-red-500'>Có lỗi xảy ra: {error.message || 'Không thể tải dữ liệu'}</p>
       </div>
     )
-  } else if (true) {
+  } else if (productionStatus.length === 0) {
     const emptyData = [
       { status: 'Đang sản xuất', value: 1, fill: '#DADFE4' },
       { status: 'Hoàn thành', value: 1, fill: '#DADFE4' },
