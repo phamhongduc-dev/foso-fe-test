@@ -1,5 +1,5 @@
 // Dummy data
-export const DUMMY_DATA = {
+const fullData = {
   topProducts: [
     {
       name: 'Áo sơ mi dài tay',
@@ -62,6 +62,22 @@ export const DUMMY_DATA = {
     { id: 4, material: 'Vải chống thấm', code: 'NVL_00024', unit: 'Mét', quantity: 8 },
     { id: 5, material: 'Vải ni', code: 'NVL_00024', unit: 'Mét', quantity: 8 }
   ]
+}
+
+const emptyData: typeof fullData = {
+  topProducts: [],
+  productionPlan: [],
+  topCustomers: [],
+  productionStatus: [],
+  productionProgressByGroup: [],
+  materialNeeds: []
+}
+
+export function getSharedData() {
+  const shouldBeEmpty = new Date().getTime() % 2 === 0
+  const data = shouldBeEmpty ? emptyData : fullData
+  console.log('🔄 Randomized new shared data:', shouldBeEmpty ? 'empty' : 'full')
+  return data
 }
 
 export const DUMMY_DATA_EMPTY = {
